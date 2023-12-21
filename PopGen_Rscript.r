@@ -13,8 +13,8 @@ library(qtl)    # load the qtl library for linkage analysis
 # Data
 #########################################################
 
-dta.main <- read.csv("Quantitative\ Genetics/Ex6/dta_ANOVA_QTLanalysis.csv")
-map <- read.csv("Quantitative\ Genetics/Ex6/input_map.csv")
+dta.main <- read.csv("dta_ANOVA_QTLanalysis.csv")
+map <- read.csv("input_map.csv")
 
 #########################################################
 # Anova
@@ -142,7 +142,7 @@ dim(sig.marker)
 #####################################################
 
 # read in linkage map and qualitative phenotypes as denoted in marker annotation
-owb <- read.cross("csv", ".", "Quantitative\ Genetics/Ex6/owb_linkage_map_qualt_phenotypes_WS2324.csv", genotypes=c("a","b"),
+owb <- read.cross("csv", ".", "owb_linkage_map_qualt_phenotypes_WS2324.csv", genotypes=c("a","b"),
                   alleles=c("a", "b"), crosstype="dh")
 # complete linkage map
 plotMap(owb, main="", show.marker.names=T)
